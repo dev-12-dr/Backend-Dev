@@ -1,0 +1,8 @@
+const fs = require("fs");
+const path = require("path");
+
+// file name from console
+const inputFile = process.argv[2];
+
+const inputFilePath = path.join(__dirname, inputFile);
+const outputFilePath = path.join(__dirname, "output.txt");
