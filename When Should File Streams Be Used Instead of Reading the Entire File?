@@ -1,0 +1,20 @@
+When Should File Streams Be Used Instead of Reading the Entire File?
+
+File streams should be used when handling large files or when efficient memory management is required. Reading an entire file at once loads all its contents into memory, which may lead to high memory consumption and performance issues. File streams process data chunk by chunk, making them more efficient and scalable.
+
+Situations Where File Streams Are Preferred
+
+Large File Handling
+When the file size is very large, reading the entire file into memory can cause memory overflow. Streams allow the file to be processed in small parts.
+
+Limited Memory Systems
+In systems with limited RAM, streams help reduce memory usage by avoiding loading the full file at once.
+
+Continuous Data Processing
+Streams are suitable when data needs to be processed sequentially, such as reading logs, videos, or audio files.
+
+Real-Time Data Transfer
+Streams are useful for real-time operations like file uploads, downloads, and network data transfer.
+
+Improved Performance
+Streaming allows the program to start processing data immediately without waiting for the entire file to be read.
