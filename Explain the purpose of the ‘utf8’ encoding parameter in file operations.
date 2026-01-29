@@ -1,0 +1,3 @@
+When a file is read without specifying an encoding, the data is returned in binary format (Buffer).
+By specifying utf8, the file content is automatically converted into a readable string.
+UTF-8 supports a wide range of characters, including alphabets, numbers, symbols, and international characters.
