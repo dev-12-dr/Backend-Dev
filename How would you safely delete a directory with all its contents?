@@ -1,0 +1,49 @@
+Asynchronous File Deletion
+const fs = require('fs');
+// Method: unlink
+fs.unlink('fileToDelete.txt', (err) => {
+if (err) {
+console.error('Error deleting file:', err);
+return;
+}
+console.log('File deleted successfully');
+});
+***Deletes file without blocking program execution. Uses a callback for result.***
+
+Synchronous File Deletion
+try {
+fs.unlinkSync('fileToDelete.txt');
+console.log('File deleted successfully');
+} catch (err) {
+console.error('Error deleting file:', err);
+}
+***Deletes file in a blocking manner. Program waits until deletion completes.***
+
+Promise-based File Deletion
+const fsPromises = require('fs').promises;
+async function deleteFileAsync() {
+try {
+await fsPromises.unlink('fileToDelete.txt');
+console.log('File deleted successfully');
+} catch (err) {
+console.error('Error deleting file:', err);
+}
+}
+***Non-blocking deletion using promises / async-await for cleaner code.***
+
+Checking File Existence Before Deletion
+async function safeDelete(filename) {
+try {
+await fsPromises.access(filename);
+await fsPromises.unlink(filename);
+console.log('File deleted successfully');
+
+} catch (err) {
+if (err.code === 'ENOENT') {
+console.log('File does not exist');
+} else {
+console.error('Error:', err);
+}
+}
+***Checks file existence first to avoid errors if file is missing.***
+}
