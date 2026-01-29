@@ -1,0 +1,11 @@
+Difference Between writeFile and appendFile Methods
+
+The writeFile and appendFile methods are used in file system operations to write data into files, but they differ in the way they handle existing file content.
+
+The writeFile method writes data to a file by overwriting the existing content. 
+If the file already exists, its previous data is completely removed and replaced with the new data. 
+If the file does not exist, a new file is created.
+
+The appendFile method writes data by adding it to the end of the file.
+It does not remove or modify the existing content. 
+If the file does not exist, it also creates a new file.
