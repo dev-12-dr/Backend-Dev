@@ -1,0 +1,17 @@
+Difference Between Synchronous and Asynchronous File Operations
+
+File operations are used to read from or write data to files stored on secondary memory. Based on the execution behavior, file operations are classified as synchronous and asynchronous.
+
+Synchronous File Operations
+
+Synchronous file operations execute in a blocking manner. 
+In this approach, the program waits until the file operation is completed before moving on to the next instruction.
+During this time, the execution of the program is halted. 
+This method is simple to implement but may reduce performance, especially when dealing with large files or slow I/O operations.
+
+Asynchronous File Operations
+
+Asynchronous file operations execute in a non-blocking manner. 
+The program does not wait for the file operation to complete and continues executing the remaining instructions.
+Once the file operation is finished, a callback function, promise, or event handler is used to process the result.
+This approach improves performance and is widely used in modern applications
