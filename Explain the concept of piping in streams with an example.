@@ -1,0 +1,11 @@
+In piping, a readable stream is connected to a writable stream, so data flows automatically from the source to the destination in chunks. 
+This improves performance and memory usage, especially when handling large files.
+
+Piping connects a readable stream to a writable stream automatically:
+const readStream = fs.createReadStream('input.txt');
+const writeStream = fs.createWriteStream('output.txt');
+// Pipe data from read to write stream
+readStream.pipe(writeStream);
+writeStream.on('finish', () => {
+console.log('File copied using streams');
+});
