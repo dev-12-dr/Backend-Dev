@@ -1,0 +1,8 @@
+getErrorMessage(err) {
+const messages = {
+'ENOENT': 'File or directory not found',
+'EACCES': 'Permission denied',
+'EEXIST': 'File already exists',
+'EISDIR': 'Expected a file but found a directory',
+'ENOTDIR': 'Expected a directory but found a file'
+};
